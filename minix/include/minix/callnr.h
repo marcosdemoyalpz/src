@@ -58,8 +58,12 @@
 #define PM_GETEPINFO		(PM_BASE + 45)
 #define PM_GETPROCNR		(PM_BASE + 46)
 #define PM_GETSYSINFO		(PM_BASE + 47)
+#define SEM_CREATE		(PM_BASE + 48)
+#define SEM_TERMINATE		(PM_BASE + 49)
+#define SEM_DOWN		(PM_BASE + 50)
+#define SEM_UP			(PM_BASE + 51)
 
-#define NR_PM_CALLS		48	/* highest number from base plus one */
+#define NR_PM_CALLS		52	/* highest number from base plus one */
 
 /*===========================================================================*
  *				Calls to VFS				     *
