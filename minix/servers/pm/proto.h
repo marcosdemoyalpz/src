@@ -89,3 +89,9 @@ struct mproc *find_proc(pid_t lpid);
 int nice_to_priority(int nice, unsigned *new_q);
 int pm_isokendpt(int ep, int *proc);
 void tell_vfs(struct mproc *rmp, message *m_ptr);
+
+/*interfaz de semaforos*/
+int sem_create(void);
+int sem_terminate(void);
+int sem_down(void);
+int sem_up(void);
