@@ -1,0 +1,51 @@
+/* Miscellaneous system calls.  Author: Kees J. Bot
+ *								31 Mar 2000
+ * The entry points into this file are:
+ *   do_reboot: kill all processes, then reboot system
+ *   do_getsysinfo: request copy of PM data structure  (Jorrit N. Herder)
+ *   do_getprocnr: lookup endpoint by process ID
+ *   do_getepinfo: get the pid/uid/gid of a process given its endpoint
+ *   do_getsetpriority: get/set process priority
+ *   do_svrctl: process manager control
+ */
+
+#include "pm.h"
+#include <minix/callnr.h>
+#include <signal.h>
+#include <sys/svrctl.h>
+#include <sys/reboot.h>
+#include <sys/resource.h>
+#include <sys/utsname.h>
+#include <minix/com.h>
+#include <minix/config.h>
+#include <minix/sysinfo.h>
+#include <minix/type.h>
+#include <minix/ds.h>
+#include <machine/archtypes.h>
+#include <lib.h>
+#include <assert.h>
+#include "mproc.h"
+#include <sem.h>
+//#include "kernel/proc.h"
+
+int sem_create(void)
+{
+  printf("System call sem_create\n");
+  return (OK);
+
+}
+int sem_terminate(void)
+{
+  printf("System call sem_terminate\n");
+  return (OK);
+}
+int sem_down(void)
+{
+  printf("System call sem_down\n");
+  return (OK);
+}
+int sem_up(void)
+{
+  printf("System call sem_up\n");
+  return (OK);
+}

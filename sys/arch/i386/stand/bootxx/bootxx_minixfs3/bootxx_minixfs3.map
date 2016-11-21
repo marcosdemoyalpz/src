@@ -1,0 +1,403 @@
+Archive member included because of file (symbol)
+
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                              boot1.o (putstr)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+                              boot1.o (readsects)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o) (pvbcopy)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o) (biosdisk_reset)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o) (dump_eax)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o) (flatdataseg)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                              bootxx.o (minixfs3_close)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+                              bootxx.o (errno)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+                              boot1.o (read)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+                              boot1.o (open)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+                              boot1.o (fstat)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (alloc)
+/usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o) (files)
+/usr/lib/libminc.a(memmove.o)
+                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (memmove)
+/usr/lib/libminc.a(memcmp.o)  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (memcmp)
+/usr/lib/libminc.a(memchr.o)  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (memchr)
+/usr/lib/libminc.a(strlen.o)  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (strlen)
+/usr/lib/libminc.a(memcpy.o)  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (memcpy)
+/usr/lib/libminc.a(memset.o)  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o) (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+files               0x30              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+freelist            0x4               /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00001000     0x1be7
+ *(.text)
+ .text          0x00001000      0x200 pbr.o
+                0x00001000                start
+                0x00001178                message
+                0x00001179                message_1
+ .text          0x00001200      0x200 label.o
+                0x00001200                ptn_disklabel
+ .text          0x00001400      0x131 bootxx.o
+                0x00001400                bootxx
+                0x00001404                bootxx_magic
+                0x00001509                _rtt
+                0x0000151d                xxfs_open
+                0x00001522                xxfs_close
+                0x00001527                xxfs_read
+                0x0000152c                xxfs_stat
+ *fill*         0x00001531        0x3 00000000
+ .text          0x00001534      0x234 boot1.o
+                0x00001534                boot1
+                0x000016e7                blkdevstrategy
+ .text          0x00001768       0x2f /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                0x00001768                putstr
+                0x00001782                putint
+ *fill*         0x00001797        0x1 00000000
+ .text          0x00001798      0x303 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+                0x00001798                set_geometry
+                0x000018d5                get_harddrives
+                0x00001904                readsects
+ *fill*         0x00001a9b        0x1 00000000
+ .text          0x00001a9c       0x54 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+                0x00001a9c                pbzero
+                0x00001ab4                vpbcopy
+                0x00001ad2                pvbcopy
+ .text          0x00001af0      0x139 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                0x00001af0                biosdisk_reset
+                0x00001b10                biosdisk_read
+                0x00001b5a                biosdisk_getinfo
+                0x00001b95                biosdisk_int13ext
+                0x00001bc3                biosdisk_extread
+                0x00001bf7                biosdisk_getextinfo
+ *fill*         0x00001c29        0x3 00000000
+ .text          0x00001c2c       0x24 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+                0x00001c2c                dump_eax
+ .text          0x00001c50      0x169 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                0x00001ca0                gdt_fixup
+                0x00001cee                real_to_prot
+                0x00001d18                prot_to_real
+                0x00001d96                dump_eax_buff
+                0x00001da9                vtophys
+ *fill*         0x00001db9        0x3 00000000
+ .text          0x00001dbc      0xaa2 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                0x00001dbc                minixfs3_open
+                0x00002601                minixfs3_close
+                0x00002643                minixfs3_read
+                0x00002812                minixfs3_stat
+ *fill*         0x0000285e        0x2 00000000
+ .text          0x00002860        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+ .text          0x00002860       0x42 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+                0x00002860                read
+ *fill*         0x000028a2        0x2 00000000
+ .text          0x000028a4       0x58 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+                0x000028a4                open
+ .text          0x000028fc       0x1c /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+                0x000028fc                fstat
+ .text          0x00002918       0x8b /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+                0x00002918                alloc
+                0x00002992                dealloc
+ *fill*         0x000029a3        0x1 00000000
+ .text          0x000029a4        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+ *fill*         0x000029a4        0xc 00000000
+ .text          0x000029b0       0x7d /usr/lib/libminc.a(memmove.o)
+                0x000029b0                memmove
+ *fill*         0x00002a2d        0x3 00000000
+ .text          0x00002a30       0x3f /usr/lib/libminc.a(memcmp.o)
+                0x00002a30                memcmp
+ *fill*         0x00002a6f        0x1 00000000
+ .text          0x00002a70       0x97 /usr/lib/libminc.a(memchr.o)
+                0x00002a70                memchr
+ *fill*         0x00002b07        0x9 00000000
+ .text          0x00002b10       0x4b /usr/lib/libminc.a(strlen.o)
+                0x00002b10                strlen
+ *fill*         0x00002b5b        0x5 00000000
+ .text          0x00002b60       0x3e /usr/lib/libminc.a(memcpy.o)
+                0x00002b60                memcpy
+ *fill*         0x00002b9e        0x2 00000000
+ .text          0x00002ba0       0x47 /usr/lib/libminc.a(memset.o)
+                0x00002ba0                memset
+ *(.text.*)
+ *(.stub)
+                0x00002be7                _etext = .
+                0x00002be7                PROVIDE (etext, .)
+
+.iplt           0x00002bf0        0x0
+ .iplt          0x00000000        0x0 bootxx.o
+
+.rodata         0x00002be7       0xa0
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.str1.1
+                0x00002be7       0xa0 boot1.o
+                0x00002c87                __data_start = .
+
+.rel.dyn        0x00002c88        0x0
+ .rel.iplt      0x00000000        0x0 bootxx.o
+ .rel.text      0x00000000        0x0 bootxx.o
+ .rel.data      0x00000000        0x0 bootxx.o
+
+.data           0x00002c88        0x4
+ *(.data)
+ .data          0x00002c88        0x0 pbr.o
+ .data          0x00002c88        0x0 label.o
+ .data          0x00002c88        0x0 bootxx.o
+ .data          0x00002c88        0x0 boot1.o
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+ .data          0x00002c88        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+ .data          0x00002c88        0x4 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+ .data          0x00002c8c        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(memmove.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(memcmp.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(memchr.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(strlen.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(memcpy.o)
+ .data          0x00002c8c        0x0 /usr/lib/libminc.a(memset.o)
+
+.igot.plt       0x00002c8c        0x0
+ .igot.plt      0x00000000        0x0 bootxx.o
+
+.data.cacheline_aligned
+ *(.data.cacheline_aligned)
+
+.data.read_mostly
+ *(.data.read_mostly)
+                0x00002c8c                _edata = .
+                0x00002c8c                PROVIDE (edata, .)
+                0x00002c8c                __bss_start = .
+
+.bss            0x00002c90      0x460
+ *(.bss)
+ .bss           0x00002c90        0x0 pbr.o
+ .bss           0x00002c90        0x0 label.o
+ .bss           0x00002c90        0x0 bootxx.o
+ .bss           0x00002c90       0x28 boot1.o
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+ .bss           0x00002cb8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+ .bss           0x00002cb8      0x400 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+ .bss           0x000030b8        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(memmove.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(memcmp.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(memchr.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(strlen.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(memcpy.o)
+ .bss           0x000030b8        0x0 /usr/lib/libminc.a(memset.o)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x000030b8        0x4 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+                0x000030b8                errno
+ COMMON         0x000030bc        0x4 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+                0x000030bc                freelist
+ COMMON         0x000030c0       0x30 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+                0x000030c0                files
+                0x000030f0                . = ALIGN (0x4)
+                0x000030f0                . = ALIGN (0x4)
+                0x000030f0                _end = .
+                0x000030f0                PROVIDE (end, .)
+
+/DISCARD/
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ *(.rel.eh_frame)
+ *(.rela.eh_frame)
+ *(.note.netbsd.ident)
+Address of section .text set to 0x1000
+LOAD pbr.o
+LOAD label.o
+LOAD bootxx.o
+LOAD boot1.o
+LOAD /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a
+LOAD /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a
+LOAD /usr/lib/libminc.a
+LOAD /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a
+LOAD /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a
+OUTPUT(bootxx_minixfs3.sym elf32-i386-minix)
+
+.ident          0x00000000       0x3b
+ .ident         0x00000000       0x3b boot1.o
+
+.comment        0x00000000       0x28
+ .comment       0x00000000       0x28 boot1.o
+                                 0x29 (size before relaxing)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+ .comment       0x00000000       0x29 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 boot1.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+
+Cross Reference Table
+
+Symbol                                            File
+__bss_start                                       bootxx.o
+_end                                              bootxx.o
+_rtt                                              bootxx.o
+alloc                                             /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+biosdisk_extread                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_getextinfo                               /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_getinfo                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_int13ext                                 /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_read                                     /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+biosdisk_reset                                    /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+blkdevstrategy                                    boot1.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+boot1                                             boot1.o
+                                                  bootxx.o
+bootxx                                            bootxx.o
+                                                  pbr.o
+bootxx_magic                                      bootxx.o
+                                                  pbr.o
+dealloc                                           /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+dump_eax                                          /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+dump_eax_buff                                     /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+end                                               /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+errno                                             /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(errno.o)
+                                                  bootxx.o
+files                                             /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(files.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+flatcodeseg                                       /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+flatdataseg                                       /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+freelist                                          /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(alloc.o)
+fstat                                             /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)
+                                                  boot1.o
+gdt_fixup                                         /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  bootxx.o
+get_harddrives                                    /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+memchr                                            /usr/lib/libminc.a(memchr.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+memcmp                                            /usr/lib/libminc.a(memcmp.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+memcpy                                            /usr/lib/libminc.a(memcpy.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+memmove                                           /usr/lib/libminc.a(memmove.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+memset                                            /usr/lib/libminc.a(memset.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+message                                           pbr.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                                                  bootxx.o
+message_1                                         pbr.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(dump_eax.o)
+minixfs3_close                                    /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                                                  bootxx.o
+minixfs3_open                                     /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                                                  bootxx.o
+minixfs3_read                                     /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                                                  bootxx.o
+minixfs3_stat                                     /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+                                                  bootxx.o
+open                                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+                                                  boot1.o
+pbzero                                            /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+prot_to_real                                      /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                                                  bootxx.o
+ptn_disklabel                                     label.o
+                                                  boot1.o
+putint                                            /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+putstr                                            /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                                                  boot1.o
+pvbcopy                                           /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+read                                              /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+                                                  boot1.o
+readsects                                         /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  boot1.o
+real_to_prot                                      /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(bios_disk.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(putstr.o)
+                                                  bootxx.o
+set_geometry                                      /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+                                                  boot1.o
+start                                             pbr.o
+strlen                                            /usr/lib/libminc.a(strlen.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(minixfs3.o)
+vpbcopy                                           /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(pvcopy.o)
+vtophys                                           /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(realprot.o)
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/i386/libi386.a(biosdisk_ll.o)
+xxfs_close                                        bootxx.o
+xxfs_open                                         bootxx.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(open.o)
+xxfs_read                                         bootxx.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(read.o)
+xxfs_stat                                         bootxx.o
+                                                  /usr/src/sys/arch/i386/stand/bootxx/bootxx_minixfs3/lib/sa/libsa.a(fstat.o)

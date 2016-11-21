@@ -1,0 +1,5 @@
+testersdir=/usr/libexec
+
+Name: kyua-testers
+Description: Kyua - Testers
+Version: 0.1

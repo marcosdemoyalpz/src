@@ -1,0 +1,8 @@
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: lutok
+Description: Lightweight C++ API for Lua
+Version: 0.3
+Cflags: -I/usr/include -I${includedir}
+Libs: -llua__ -L${libdir} -llutok
