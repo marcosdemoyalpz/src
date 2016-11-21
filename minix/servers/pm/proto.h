@@ -106,41 +106,41 @@ typedef struct _node {
 
 /** Queue data structure
 */
-typedef struct _queue{
+typedef struct _Queue{
 	int   size;
-  node *head;		/** Node pointer to the head of the queue*/
-  node *tail;	/** Node pointer to the tail of the queue*/
-}queue;
+  node *head;		/** Node pointer to the head of the Queue*/
+  node *tail;	/** Node pointer to the tail of the Queue*/
+}Queue;
 
-/** Reserves memory for queue.
-\param *q queue for which the memory is going to be reserved
+/** Reserves memory for Queue.
+\param *q Queue for which the memory is going to be reserved
 */
-void init_queue(queue * q);
+void init_Queue(Queue * q);
 
-/** Adds node to the queue with a value
-\param queue * q an initialized queue.
+/** Adds node to the Queue with a value
+\param Queue * q an initialized Queue.
 \param int value  is the id of the process
 */
-void enqueue(queue * q, int value);
+void enQueue(Queue * q, int value);
 
-/** Removes node from the queue
-\param *q initialized queue
+/** Removes node from the Queue
+\param *q initialized Queue
 */
-int dequeue(queue * q);
+int deQueue(Queue * q);
 
 /**
- * [queue_size Devuelve el tamanio de la pila]
+ * [Queue_size Devuelve el tamanio de la pila]
  * @param  q [La pila d]
  * @return   [tamanio de la pila]
  */
-int queue_size(queue * q);
+int Queue_size(Queue * q);
 
 /**
- * [is_in_queue Verifica ]
+ * [is_in_Queue Verifica ]
  * @param q     [La pila d]
  * @param value [Devuelve 1 si es Verdadero, devuleve 0 si es falso]
  */
-void is_in_queue(queue * q, int value);
+int is_in_Queue(Queue * q, int value);
 
 
 /*interfaz de semaforos*/
@@ -151,7 +151,7 @@ basic parameter for the semaphores.
 typedef struct _semaphore{
   int initialized; /** If initialized == 0 is NOT initialized, if initialized==1 is initialized  */
   int value;			 /** This is the semaphore id*/
-  queue blocked_processes; /** Queue of procesesses waiting*/
+  Queue blocked_processes; /** Queue of procesesses waiting*/
 }semaphore;
 
 /**
@@ -162,7 +162,7 @@ extern semaphore * sem_table[SEM_MAX];
 /**
  * Cantidad de semaforos inicializados en un momento dado
  */
-int sems_initialized = 0;
+//int sems_initialized = 0;
 /**
  * [sem_init Inicializar el semaforo]
  * @param sem [Semaforo que se va a inicializar]
