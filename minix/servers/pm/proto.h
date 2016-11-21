@@ -4,6 +4,13 @@ struct mproc;
 
 #include <minix/timers.h>
 
+
+/**
+SEM_MAX is the max number of semphores that the system can use
+at any given time
+*/
+#define SEM_MAX 30
+
 /* alarm.c */
 int do_itimer(void);
 void set_alarm(struct mproc *rmp, clock_t ticks);
@@ -89,9 +96,96 @@ struct mproc *find_proc(pid_t lpid);
 int nice_to_priority(int nice, unsigned *new_q);
 int pm_isokendpt(int ep, int *proc);
 void tell_vfs(struct mproc *rmp, message *m_ptr);
+/*pilas*/
+/** Node data structure for a simple linked list
+*/
+typedef struct _node {
+	int value;					 /** In this case value is going to be the proceses id "pid_t"*/
+	struct _node * next; /** */
+}node;
+
+/** Queue data structure
+*/
+typedef struct _queue{
+	int   size;
+  node *head;		/** Node pointer to the head of the queue*/
+  node *tail;	/** Node pointer to the tail of the queue*/
+}queue;
+
+/** Reserves memory for queue.
+\param *q queue for which the memory is going to be reserved
+*/
+void init_queue(queue * q);
+
+/** Adds node to the queue with a value
+\param queue * q an initialized queue.
+\param int value  is the id of the process
+*/
+void enqueue(queue * q, int value);
+
+/** Removes node from the queue
+\param *q initialized queue
+*/
+int dequeue(queue * q);
+
+/**
+ * [queue_size Devuelve el tamanio de la pila]
+ * @param  q [La pila d]
+ * @return   [tamanio de la pila]
+ */
+int queue_size(queue * q);
+
+/**
+ * [is_in_queue Verifica ]
+ * @param q     [La pila d]
+ * @param value [Devuelve 1 si es Verdadero, devuleve 0 si es falso]
+ */
+void is_in_queue(queue * q, int value);
+
 
 /*interfaz de semaforos*/
+/**
+semaphore is the struct _semaphore alias. In this struct we have
+basic parameter for the semaphores.
+*/
+typedef struct _semaphore{
+  int initialized; /** If initialized == 0 is NOT initialized, if initialized==1 is initialized  */
+  int value;			 /** This is the semaphore id*/
+  queue blocked_processes; /** Queue of procesesses waiting*/
+}semaphore;
+
+/**
+extern semaphore sem_table[SEM_MAX] is the table in which all
+semaphores are. This table is going to be shared among the processes
+*/
+extern semaphore sem_table[SEM_MAX];
+/**
+ * Cantidad de semaforos inicializados en un momento dado
+ */
+int sems_initialized = 0;
+/**
+ * [sem_init Inicializar el semaforo]
+ * @param sem [Semaforo que se va a inicializar]
+ */
+void sem_init(semaphore *sem);
+
+/**
+ * [sem_create Crear el semaforo]
+ * @return  [-1 si fallo]
+ */
 int sem_create(void);
+/**
+ * [sem_terminate Terminar el semaforo]
+ * @return  [-1 si fallo]
+ */
 int sem_terminate(void);
+/**
+ * [sem_down Decrementar  el valor del semaforo]
+ * @return  [-1 si fallo]
+ */
 int sem_down(void);
+/**
+ * [sem_up Aumentar el valor del semaforo]
+ * @return  [-1 si fallo]
+ */
 int sem_up(void);
