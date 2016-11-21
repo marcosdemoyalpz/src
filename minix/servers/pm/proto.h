@@ -158,7 +158,7 @@ typedef struct _semaphore{
 extern semaphore sem_table[SEM_MAX] is the table in which all
 semaphores are. This table is going to be shared among the processes
 */
-extern semaphore sem_table[SEM_MAX];
+extern semaphore * sem_table[SEM_MAX];
 /**
  * Cantidad de semaforos inicializados en un momento dado
  */
